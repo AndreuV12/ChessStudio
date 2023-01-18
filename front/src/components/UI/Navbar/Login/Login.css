@@ -1,0 +1,12 @@
+.Login {    
+    height: 100%;
+    padding-inline: 2rem;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+}
+
+.Login:hover{
+    background-color: skyblue;
+    cursor: pointer;
+}

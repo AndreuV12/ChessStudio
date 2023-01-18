@@ -1,0 +1,49 @@
+{ "qween_gambit_op" : {
+    "cont": [
+        {   
+            "move_name": "d4",
+            "move": {
+                "s1": {"col": 3, "row": 6, "piece": "PW"},
+                "s2": {"col": 3, "row": 4, "piece": ""}
+            },
+            "cont": [
+                {   "move_name": "d5",
+                    "move": {
+                        "s1": {"col": 3, "row": 1, "piece": "PB"},
+                        "s2": {"col": 3, "row": 3, "piece": ""}
+                    },
+                    "cont": [{
+                        "move_name":"c4",
+                        "move": {
+                            "s1": {"col": 2, "row": 6, "piece": "PW"},
+                            "s2": {"col": 2, "row": 4, "piece": ""}
+                        },
+                        "cont": [
+
+                        ]
+                    }]
+                },
+                {
+                    "move_name": "Cf6",
+                    "move":{
+                        "s1": {"col": 6, "row": 0, "piece": "HB"},
+                        "s2": {"col": 5, "row": 2, "piece": ""}
+                    },
+                    "cont": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "move_name": "e4",
+            "move": {
+                "s1": {"col": 4, "row": 6, "piece": "PW"},
+                "s2": {"col": 4, "row": 4, "piece": ""}
+            },
+            "cont": [
+            ]
+        }
+    
+]
+}}

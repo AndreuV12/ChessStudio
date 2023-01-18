@@ -1,0 +1,1 @@
+npm init; npm start on front and back directories to run project 

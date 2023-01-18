@@ -1,0 +1,17 @@
+.InputBar{
+    position: relative;
+    display: flex;
+    background-color: beige;
+}
+
+.InputBar>input{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;}
+
+.InputBar>img{
+    right: 0;
+    position: absolute;
+    height: 100%;
+}

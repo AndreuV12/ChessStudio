@@ -1,0 +1,21 @@
+.OpeningEditor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50em;
+    height: 40em;
+    margin: 10em
+
+}
+
+.OpeningEditor>.Board{
+    height: 100%;
+    margin-inline: 2%;
+    
+}
+
+.Interface{
+    height: 100%;
+    margin-inline: 2%;
+    aspect-ratio: 0.6;
+}

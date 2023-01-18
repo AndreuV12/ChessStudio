@@ -1,0 +1,12 @@
+.OpList{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+.OpList>.OpItem{
+    width: 500px;
+    height: 500px;
+    margin: 50px;
+}
