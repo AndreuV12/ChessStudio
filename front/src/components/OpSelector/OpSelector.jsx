@@ -8,8 +8,8 @@ import OpList from "./OpList/OpList"
 
 import { getOpenings, addOpening, removeOpening, updateOpeningName } from "../../helpers/apiCalls" 
 
-export default function OpSelector(){
-    let [ openingList, setOpeningList ] = useState([initialOp])
+export default function OpSelector ( { username }){
+    let [ openingList, setOpeningList ] = useState([])
     let [ filter, setFilter ] = useState("")
     let [ addName, setAddName ] = useState("")
     
@@ -18,6 +18,7 @@ export default function OpSelector(){
     let updateData = () => {
         getOpenings()
         .then((data)=>{
+            console.log("Data:",data)
             setOpeningList( data.map(({_id, name, shown_pos}) => ({opening_id: _id, name, shown_pos})) )
         })
     }
@@ -71,26 +72,31 @@ export default function OpSelector(){
         setOpeningList( openingList.filter((el)=>(el.opening_id != opening_id)) )
     }
 
+    console.log(username)
     return (
         <div className="OpSelector">
             <div className = "OpSelectorHead">
                 <div className="Title">
-                    Andreu Studio
+                    {username} Studio
                 </div>
                 <div className="Tools">
                         <input  type="text" name="addName" id="addName" placeholder="Name" onChange={handleAddNameChange}/> 
                         <img className = "AddButton" src={AddIcon} onClick ={handleAddClick}/>
-  
                         <input  type="text" name="filter" placeholder="Search" onChange={handleFilterChange}/> 
                 </div>
-      
             </div>
             
             <div>
-                <OpList openingList={filerAndSort(openingList, filter)} 
-                onEditSubmit={handleEditSubmit}
-                onRemoveClick={handleRemoveClick}
-                />
+                {
+                    openingList.length ? 
+                    <OpList openingList={filerAndSort(openingList, filter)} 
+                    onEditSubmit={handleEditSubmit}
+                    onRemoveClick={handleRemoveClick}
+                    />
+                    :
+                    <text className="NoDataMessage">No current data</text>
+                    }
+        
             </div>
 
         </div>

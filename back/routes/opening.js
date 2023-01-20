@@ -39,8 +39,9 @@ opening_router.get('/get/:opening_id', async (req, res) => {
 })
 
 opening_router.get('/list', async (req, res) => {
-   
-    let openings = await getUserOpenings(req.session.email)
+    let openings = await getUserOpenings(req.session.user.email)
+    if (!openings.length)
+        return res.status(204)
     return res.json(openings)
 })
 

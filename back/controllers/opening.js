@@ -25,7 +25,7 @@ let getOpening = async (opening_id) => {
 }
 
 let getUserOpenings = async (email) => {
-    return await Opening.find(email)
+    return await Opening.find({email})
 }
 
 let addMove = async (move_name, {from, to}, opening_id, path) => {
